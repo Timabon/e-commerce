@@ -12,6 +12,8 @@ public class Main {
             System.out.println("Standard User");
         }
 
+        System.out.println("Hello Ender");
+
         for (Field field : user.getClass().getDeclaredFields()) {
             if (field.isAnnotationPresent(StringLength.class)) {
                 StringLength annotation = field.getAnnotation(StringLength.class);
@@ -38,6 +40,7 @@ public class Main {
     static void checkLength() throws LengthException {
         throw new LengthException("The username has to be between 5 and 10 characters length.");
     }
+
 
 
 }
