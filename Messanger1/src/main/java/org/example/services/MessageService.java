@@ -1,6 +1,7 @@
 package org.example.services;
 
 
+import org.example.hibernate.HibernateTest;
 import org.example.model.Message;
 
 import java.util.ArrayList;
@@ -19,18 +20,21 @@ public class MessageService {
         return list;
     }
 
-  /*  public Message addMessage(Message message){
+    /*public Message getMessage(long id){}*/
+
+    public Message updateMessage(Message message){
         HibernateTest.parsing(message);
         return message;
     }
 
-    public Message updateMessage(Message message){
-        if(message.getId() <= 0){
-            return null;
-        }
+    public void deleteMessage(Message message){
+        HibernateTest.delete(message);;
+    }
+    public Message addMessage(Message message){
         HibernateTest.parsing(message);
         return message;
     }
-*/
+
+
 
 }

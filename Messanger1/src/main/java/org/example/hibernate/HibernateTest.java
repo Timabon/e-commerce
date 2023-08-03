@@ -35,7 +35,7 @@ public class HibernateTest {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
-        Message existingMessage = entityManager.find(Message.class, message.getId());
+        Message existingMessage = entityManager.find(Message.class, message.getMessageId());
 
         if(existingMessage == null){
             entityManager.persist(message);
@@ -52,7 +52,7 @@ public class HibernateTest {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         entityManager.getTransaction().begin();
-        Message messageToDelete = entityManager.find(Message.class, message.getId());
+        Message messageToDelete = entityManager.find(Message.class, message.getMessageId());
 
         if(messageToDelete != null){
             entityManager.remove(messageToDelete);

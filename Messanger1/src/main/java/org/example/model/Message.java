@@ -9,7 +9,7 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    int id;
+    int messageId;
     @Column(name = "Message")
     String message;
     @Column(name = "Author")
@@ -25,12 +25,12 @@ public class Message {
         this.author = author;
     }
 
-    public int getId() {
-        return id;
+    public int getMessageId() {
+        return messageId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setMessageId(int id) {
+        this.messageId = id;
     }
 
     public String getMessage() {

@@ -1,10 +1,12 @@
 package org.example.resources;
 
-import org.example.hibernate.HibernateTest;
 import org.example.model.Message;
 import org.example.services.MessageService;
 
-import javax.ws.rs.*;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -22,23 +24,7 @@ public class MessageResource {
         return messageService.getAllMessages();
     }
 
-    /*public Message getMessage(long id){
 
-        return message;
-    }*/
-    public Message addMessage(Message message){
-        HibernateTest.parsing(message);
-        return message;
-    }
-    @PUT
-    public Message updateMessage(Message message){
-        HibernateTest.parsing(message);
-        return message;
-    }
-
-    public void deleteMessage(Message message){
-        HibernateTest.delete(message);;
-    }
 
 
 

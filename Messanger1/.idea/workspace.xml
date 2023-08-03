@@ -10,30 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25eb863-aea6-4250-b763-b41d42b04cce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Profile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/src/main/java/org/example/message/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/src/main/java/org/example/resources/MessageResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/src/main/java/org/example/resources/MyResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/src/main/java/org/example/services/MessageService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Messanger/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hibernate/HibernateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/hibernate/HibernateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MessageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MessageResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +306,8 @@
       <workItem from="1690969234993" duration="13399000" />
       <workItem from="1691051750563" duration="123000" />
       <workItem from="1691053887276" duration="212000" />
-      <workItem from="1691054235232" duration="16881000" />
+      <workItem from="1691054235232" duration="17324000" />
+      <workItem from="1691077023467" duration="173000" />
     </task>
     <servers />
   </component>
