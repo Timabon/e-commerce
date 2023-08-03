@@ -1,13 +1,18 @@
-package org.example.message;
+package org.example.model;
 
-
+import jakarta.persistence.*;
 
 import java.util.Date;
-
-
+@Entity
+@Table(name = "Messages")
 public class Message {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     int id;
+    @Column(name = "Message")
     String message;
+    @Column(name = "Author")
     String author;
     Date date;
 
@@ -15,8 +20,7 @@ public class Message {
     public Message(){
 
     }
-    public Message(int id, String message, String author){
-        this.id = id;
+    public Message(String message, String author){
         this.message = message;
         this.author = author;
     }
