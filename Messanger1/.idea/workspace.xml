@@ -9,18 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c25eb863-aea6-4250-b763-b41d42b04cce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3013fbb4-dbe4-402a-b70a-c66a4a008f47/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/public.abK9xQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hibernate/HibernateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/hibernate/HibernateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MessageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MessageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/MessageService.java" afterDir="false" />
-    </list>
+    <list default="true" id="c25eb863-aea6-4250-b763-b41d42b04cce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -307,7 +296,7 @@
       <workItem from="1691051750563" duration="123000" />
       <workItem from="1691053887276" duration="212000" />
       <workItem from="1691054235232" duration="17324000" />
-      <workItem from="1691077023467" duration="173000" />
+      <workItem from="1691077023467" duration="373000" />
     </task>
     <servers />
   </component>
