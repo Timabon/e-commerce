@@ -1,4 +1,4 @@
-package com.example.SpringDemo;
+package com.example.SpringDemo.TriangleBeans;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

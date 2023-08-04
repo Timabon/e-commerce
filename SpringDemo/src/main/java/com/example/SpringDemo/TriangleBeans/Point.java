@@ -1,4 +1,4 @@
-package com.example.SpringDemo;
+package com.example.SpringDemo.TriangleBeans;
 
 public class Point {
     private int x;

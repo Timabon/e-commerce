@@ -10,16 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25eb863-aea6-4250-b763-b41d42b04cce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d/storage_v2/_src_/database/hibernateDB.UNTZvA/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/hibernate/HibernateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/model/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/model/Profile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/resources/MessageResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/services/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/restservice/MyResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/hibernate/HibernateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/hibernate/HibernateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/resources/MessageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/resources/MessageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringDemo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Point.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/SpringDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/SpringDemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Triangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/restservice/GreetingControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/restservice/GreetingControler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -309,7 +313,7 @@
       <workItem from="1691053887276" duration="212000" />
       <workItem from="1691054235232" duration="17324000" />
       <workItem from="1691077023467" duration="373000" />
-      <workItem from="1691134422297" duration="11218000" />
+      <workItem from="1691134422297" duration="14824000" />
     </task>
     <servers />
   </component>

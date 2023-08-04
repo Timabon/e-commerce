@@ -1,4 +1,4 @@
-package com.example.SpringDemo;
+package com.example.SpringDemo.TriangleBeans;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
