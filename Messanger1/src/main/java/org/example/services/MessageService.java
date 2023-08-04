@@ -4,34 +4,29 @@ package org.example.services;
 import org.example.hibernate.HibernateTest;
 import org.example.model.Message;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MessageService {
 
     public List<Message> getAllMessages(){
-        Message m1 = new Message("Hello Guys!", "Tymofii");
-        Message m2 = new Message("Hello Girls!", "Flocki");
-        Message m3 = new Message("Hello Everybody!", "Flockiss");
-        List<Message> list = new ArrayList<>();
-        list.add(m1);
-        list.add(m2);
-        list.add(m3);
-        return list;
+
+      return HibernateTest.getAllMessages();
     }
 
-    /*public Message getMessage(long id){}*/
+    public Message getMessage(long id){
+        return HibernateTest.getMessage(id);
+    }
 
     public Message updateMessage(Message message){
-        HibernateTest.parsing(message);
+        HibernateTest.updateMessage(message);
         return message;
     }
 
-    public void deleteMessage(Message message){
-        HibernateTest.delete(message);;
+    public void deleteMessage(long id){
+        HibernateTest.delete(id);;
     }
     public Message addMessage(Message message){
-        HibernateTest.parsing(message);
+        HibernateTest.addMessage(message);
         return message;
     }
 

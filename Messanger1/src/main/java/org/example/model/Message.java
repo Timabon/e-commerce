@@ -56,4 +56,15 @@ public class Message {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\"messageId\":" + messageId +
+                ", \"message\":\"" + message + '\"' +
+                ", \"author\":\"" + author + '\"' +
+                ", \"date\":" + date +
+                '}';
+    }
+
 }
