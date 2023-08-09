@@ -10,20 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c25eb863-aea6-4250-b763-b41d42b04cce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/hibernate/HibernateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/model/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/model/Profile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/resources/MessageResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Messanger1/services/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/restservice/MyResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringDemo/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5c4693fd-70f5-4408-9470-cfe92c1ff68f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5c4693fd-70f5-4408-9470-cfe92c1ff68f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/db157085-d16a-4886-98e5-0b4d132fbb0d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringDemo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringDemo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/AppConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/SpringDemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/SpringDemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/Triangle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/restservice/GreetingControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringDemo/src/main/java/com/example/SpringDemo/restservice/GreetingControler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,6 +304,7 @@
       <workItem from="1691054235232" duration="17324000" />
       <workItem from="1691077023467" duration="373000" />
       <workItem from="1691134422297" duration="14824000" />
+      <workItem from="1691392417968" duration="612000" />
     </task>
     <servers />
   </component>

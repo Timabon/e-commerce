@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/messages")
 public class MessageResource {
     MessageService messageService = new MessageService();
 

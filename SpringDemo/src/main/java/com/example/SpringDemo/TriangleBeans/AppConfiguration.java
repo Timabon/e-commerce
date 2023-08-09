@@ -1,7 +1,9 @@
 package com.example.SpringDemo.TriangleBeans;
 
+import com.example.SpringDemo.e_commerce.basket.Basket;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Configuration
 public class AppConfiguration {
@@ -19,6 +21,11 @@ public class AppConfiguration {
     public Triangle integer(){
         return new Triangle(20);
     }*/
+    @Bean
+    @SessionScope
+    public Basket basket(){
+        return new Basket();
+    }
     @Bean
     public Triangle triangle(){
         return new Triangle();
