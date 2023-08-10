@@ -3,7 +3,6 @@ package com.example.SpringDemo.e_commerce.order;
 import com.example.SpringDemo.e_commerce.customer.Customer;
 import com.example.SpringDemo.e_commerce.user.User;
 import jakarta.persistence.*;
-import org.aspectj.weaver.ast.Or;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -15,23 +14,28 @@ public class Order {
     @Column(name = "order_id")
     private Long orderId;
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
     @Temporal(TemporalType.DATE)
     @Column(name = "date")
     private Date orderDate;
-    @Column(name = "customerId")
-    private Long customerId;
+
     @Column(name = "description")
     private String orderDescription;
 
     public Order(){}
 
-    public Order(Long orderId, Long customerId, String orderDescription){
-        this.orderId = orderId;
-        this.customerId = customerId;
+    public Order(Long customerId, String orderDescription){
         this.orderDate = Date.valueOf(LocalDate.EPOCH);
         this.orderDescription = orderDescription;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public Long getOrderId() {
@@ -48,14 +52,6 @@ public class Order {
 
     public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
-    }
-
-    public Long getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(Long customerId) {
-        this.customerId = customerId;
     }
 
     public String getOrderDescription() {

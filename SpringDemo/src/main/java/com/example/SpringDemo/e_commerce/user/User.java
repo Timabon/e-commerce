@@ -2,19 +2,22 @@ package com.example.SpringDemo.e_commerce.user;
 
 import jakarta.persistence.*;
 
-@Entity
+/*@Entity
 @Table(name = "users")
+@Inheritance(strategy = InheritanceType.JOINED)*/
+@MappedSuperclass
 public class User {
     @Id
     @Column(name = "user_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
+    private long userId;
     @Column(name = "username")
     private String username;
     @Column(name = "e_mail")
     private String e_mail;
     @Column(name = "password")
     private String password;
+
 
 
     public User(){}
@@ -27,11 +30,11 @@ public class User {
         this.password = password;
     }
 
-    public int getUserId() {
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 

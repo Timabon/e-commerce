@@ -1,10 +1,8 @@
 package com.example.SpringDemo.e_commerce.product;
 
-import com.example.SpringDemo.e_commerce.user.UserController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 @RestController

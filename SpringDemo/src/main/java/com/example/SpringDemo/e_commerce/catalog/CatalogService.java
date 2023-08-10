@@ -39,7 +39,6 @@ public class CatalogService {
 
         Catalog catalog = optionalCatalog.get();
         catalog.addProduct(product);
-        productRepository.save(product);
         Catalog saved = catalogRepository.save(catalog);
         return ResponseEntity.ok(saved);
     }
@@ -52,7 +51,6 @@ public class CatalogService {
 
         Catalog catalog = optionalCatalog.get();
         catalog.addProducts(products);
-        productRepository.saveAll(products);
         Catalog saved = catalogRepository.save(catalog);
         return ResponseEntity.ok(saved);
     }

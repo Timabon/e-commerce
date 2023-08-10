@@ -15,7 +15,7 @@ public class Catalog {
 
     @Column
     private String name;
-    @OneToMany
+    @ManyToMany
     List<Product> products;
 
     public Catalog(){}

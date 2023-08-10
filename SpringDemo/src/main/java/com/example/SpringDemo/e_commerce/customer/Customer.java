@@ -1,11 +1,7 @@
 package com.example.SpringDemo.e_commerce.customer;
 
-import com.example.SpringDemo.e_commerce.order.Order;
 import com.example.SpringDemo.e_commerce.user.User;
 import jakarta.persistence.Entity;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 public class Customer extends User {
