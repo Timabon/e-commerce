@@ -11,6 +11,7 @@ import com.example.SpringDemo.e_commerce.customer.Customer;
 import com.example.SpringDemo.e_commerce.customer.CustomerRepository;
 import com.example.SpringDemo.e_commerce.user.User;
 import com.example.SpringDemo.exception.ResourceNotFoundException;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.ws.rs.NotFoundException;
@@ -25,13 +26,12 @@ public class CustomerService {
     OrderService orderService;
 
     Basket basket;
-    //TODO CRUD
     //TODO register and login metods
 
     public void register(){};
 
     public void login(){};
-
+    @Transactional
     public Customer createCustomer(Customer customer){
         return customerRepository.save(customer);
     }
@@ -82,28 +82,43 @@ public class CustomerService {
         basket.addProduct(product, amount);
     }
 
-    public void viewOrders(){
-
-    }
 
     public void checkout(String username, String desc){
 
 
-        //todo create order object;
         Order order = new Order();
-        //todo fill order object with products from basket
-        order.addProducts(basket.getProductMap());
-        //todo fill order object with customer in
-    order.setCustomer(getCustomer(username));
-    //todo add descrtipon
+
+        order.setProductMap(basket.getProductMap());
+
+        Customer customer = getCustomer(username);
+        order.setCustomer(customer);
+        order.setInvoiceAddress(customer.getInvoiceAddress());
+        order.setShippingAddress(customer.getShippingAddress());
+
         order.setOrderDescription(desc);
-        //todo save orderobject using orderrepo
+
         orderRepository.save(order);
-        //todo clear basket
+
         basket.clearBasket();
     }
 
-    public void invoiceAddress(){}
+    public Order createOrder(OrderDTO orderDto) {
+        return orderService.createOrder(orderDto);
+    }
 
-    public void shippingAddress(){}
+    public Order getOrder(Long id) {
+        return orderService.getOrder(id);
+    }
+
+    public List<Order> getAllOrdersOfUser(Long id) {
+        return orderService.getAllOrdersOfUser(id);
+    }
+
+    public void updateOrder(Long id, Order order) {
+        orderService.updateOrder(id,order);
+    }
+
+    public void deleteOrder(Long id) {
+        orderService.deleteOrder(id);
+    }
 }

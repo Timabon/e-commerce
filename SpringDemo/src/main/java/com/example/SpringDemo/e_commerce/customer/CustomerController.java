@@ -1,4 +1,6 @@
 package com.example.SpringDemo.e_commerce.customer;
+import com.example.SpringDemo.e_commerce.order.Order;
+import com.example.SpringDemo.e_commerce.order.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -57,6 +59,29 @@ public class CustomerController {
 
     public void checkout(@PathVariable("username") String username, @RequestBody String description){
         customerService.checkout(username,description);
+    }
 
+    @PostMapping("/orders")
+    @ResponseBody
+    public Order createOrder(@RequestBody OrderDTO orderDto){
+        return customerService.createOrder(orderDto);
+    }
+    @GetMapping("/users/orders/{id}")
+    public Order getOrder(@PathVariable Long id){
+        return customerService.getOrder(id);
+    }
+    @GetMapping("/users/orders/all-orders/{id}")
+    public List<Order> getAllOrdersOfUser(@PathVariable Long id){
+        return customerService.getAllOrdersOfUser(id);
+    }
+    @PutMapping("/users/orders/update/{id}")
+    public ResponseEntity<Order> updateOrder(@PathVariable Long id, @RequestBody Order order){
+        customerService.updateOrder(id,order);
+        return ResponseEntity.ok().build();
+    }
+    @DeleteMapping("/users/orders/{id}")
+    public ResponseEntity<Order> deleteOrder(@PathVariable Long id){
+        customerService.deleteOrder(id);
+        return ResponseEntity.notFound().build();
     }
 }

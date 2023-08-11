@@ -28,9 +28,15 @@ public class Order {
     @Column(name = "description")
     private String orderDescription;
 
-    @ManyToMany
-    List<Product> products;
-
+    private String shippingAddress;
+    private String invoiceAddress;
+    //@ManyToMany(cascade = CascadeType.ALL)
+    //List<Product> products;
+    @ElementCollection
+    @MapKeyJoinColumn(name = "product_id")
+    @Column(name = "product_amount")
+    @CollectionTable(name = "products_table", joinColumns = @JoinColumn(name = "order_id"))
+    Map<Product, Integer> productMap = new HashMap<>();
 
 
     //todo total price
@@ -42,21 +48,32 @@ public class Order {
         this.orderDescription = orderDescription;
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public Map<Product, Integer> getProductMap() {
+        return productMap;
     }
 
-    public void setProducts(List<Product> products) {
-        this.products = products;
+    public void setProductMap(Map<Product, Integer> productMap) {
+        this.productMap = productMap;
     }
 
-    public void addProduct(Product product) {
-        this.products.add(product);
+    public String getShippingAddress() {
+        return shippingAddress;
     }
 
-    public void addProducts(List<Product> products) {
-        this.products.addAll(products);
+    public void setShippingAddress(String shippingAddress) {
+        this.shippingAddress = shippingAddress;
     }
+
+    public String getInvoiceAddress() {
+        return invoiceAddress;
+    }
+
+    public void setInvoiceAddress(String invoiceAddress) {
+        this.invoiceAddress = invoiceAddress;
+    }
+
+
+
 
     public Customer getCustomer() {
         return customer;
@@ -91,7 +108,14 @@ public class Order {
     }
 
 
-    public void addProducts(Map<Product, Integer> productMap) {
-        this.products.add((Product) productMap);
+    public void addProduct(Product product) {
+        this.productMap.merge(product, 1, Integer::sum);
+
+/*        if(this.productMap.containsKey(product)){
+            this.productMap.put(product, this.productMap.get(product) +1);
+        } else {
+            this.productMap.put(product, 1);
+        }*/
+
     }
 }

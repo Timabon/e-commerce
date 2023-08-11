@@ -35,7 +35,6 @@ public class CatalogController {
         return catalogService.addProductsToCatalog(id, products);
     }
     @DeleteMapping("/catalogs/{catalogId}/{id}")
-    //TODO it deletes by position not by id rn
     public ResponseEntity<Catalog> removeProductFromCatalog(@PathVariable Long catalogId,@PathVariable int id){
         return catalogService.removeProductFromCatalog(catalogId,id);
     }

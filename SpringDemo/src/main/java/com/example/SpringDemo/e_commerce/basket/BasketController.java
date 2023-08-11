@@ -9,7 +9,7 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v1/")
 public class BasketController {
-
+    //TODO differenciate the baskets between the users
     Basket basket;
 
     public BasketController (Basket basket){

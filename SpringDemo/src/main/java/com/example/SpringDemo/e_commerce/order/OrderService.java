@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -70,12 +71,5 @@ public class OrderService {
         return ResponseEntity.ok().build();
     }
 
-    public ResponseEntity<Order> addProductsToOrder(Long id, List<Product> products){
-        if (orderRepository.findByOrderId(id) == null){
-            throw new ResourceNotFoundException("Order not found");
-        }
-        Order order = orderRepository.findByOrderId(id);
-        order.addProducts(products);
-        return ResponseEntity.ok().build();
-    }
+
 }
