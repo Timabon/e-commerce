@@ -2,6 +2,7 @@ package com.example.SpringDemo.e_commerce.order;
 
 import com.example.SpringDemo.e_commerce.customer.Customer;
 import com.example.SpringDemo.e_commerce.customer.CustomerRepository;
+import com.example.SpringDemo.e_commerce.product.Product;
 import com.example.SpringDemo.exception.ResourceNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -58,5 +59,23 @@ public class OrderService {
         }
         orderRepository.deleteById(id);
         return ResponseEntity.notFound().build();
+    }
+
+    public ResponseEntity<Order> addProductToOrder(Long id, Product product){
+        if (orderRepository.findByOrderId(id) == null){
+            throw new ResourceNotFoundException("Order not found");
+        }
+        Order order = orderRepository.findByOrderId(id);
+        order.addProduct(product);
+        return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity<Order> addProductsToOrder(Long id, List<Product> products){
+        if (orderRepository.findByOrderId(id) == null){
+            throw new ResourceNotFoundException("Order not found");
+        }
+        Order order = orderRepository.findByOrderId(id);
+        order.addProducts(products);
+        return ResponseEntity.ok().build();
     }
 }

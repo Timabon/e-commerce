@@ -2,11 +2,14 @@ package com.example.SpringDemo.e_commerce.customer;
 
 import com.example.SpringDemo.e_commerce.basket.Basket;
 import com.example.SpringDemo.e_commerce.order.Order;
+import com.example.SpringDemo.e_commerce.order.OrderDTO;
 import com.example.SpringDemo.e_commerce.order.OrderRepository;
+import com.example.SpringDemo.e_commerce.order.OrderService;
 import com.example.SpringDemo.e_commerce.product.Product;
 import com.example.SpringDemo.e_commerce.product.ProductRepository;
 import com.example.SpringDemo.e_commerce.customer.Customer;
 import com.example.SpringDemo.e_commerce.customer.CustomerRepository;
+import com.example.SpringDemo.e_commerce.user.User;
 import com.example.SpringDemo.exception.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +21,8 @@ public class CustomerService {
 
     CustomerRepository customerRepository;
     OrderRepository orderRepository;
+
+    OrderService orderService;
 
     Basket basket;
     //TODO CRUD
@@ -67,25 +72,35 @@ public class CustomerService {
         return customerRepository.saveAll(customers);
     }
 
-    public CustomerService(CustomerRepository customerRepository, OrderRepository orderRepository, Basket basket){
+    public CustomerService(CustomerRepository customerRepository, OrderRepository orderRepository, Basket basket, OrderService orderService){
+        this.orderService = orderService;
         this.orderRepository = orderRepository;
         this.customerRepository = customerRepository;
         this.basket = basket;
     }
-    public void addToBasket(Product product){
-        basket.addProduct(product);
+    public void addToBasket(Product product, int amount){
+        basket.addProduct(product, amount);
     }
 
     public void viewOrders(){
 
     }
 
-    public void checkout(){
-        //todo create order object
+    public void checkout(String username, String desc){
+
+
+        //todo create order object;
+        Order order = new Order();
         //todo fill order object with products from basket
-        //todo fill order object with customer info
+        order.addProducts(basket.getProductMap());
+        //todo fill order object with customer in
+    order.setCustomer(getCustomer(username));
+    //todo add descrtipon
+        order.setOrderDescription(desc);
         //todo save orderobject using orderrepo
+        orderRepository.save(order);
         //todo clear basket
+        basket.clearBasket();
     }
 
     public void invoiceAddress(){}

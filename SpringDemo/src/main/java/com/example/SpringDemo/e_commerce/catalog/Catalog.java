@@ -56,7 +56,10 @@ public class Catalog {
 
 
     public void removeProduct(int id) {
-        Product product = products.get(id);
-        this.products.remove(product);
+        for(Product product : products){
+            if(product.getProductId() == id){
+                products.remove(product);
+            }
+        }
     }
 }

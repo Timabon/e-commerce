@@ -1,11 +1,16 @@
 package com.example.SpringDemo.e_commerce.order;
 
 import com.example.SpringDemo.e_commerce.customer.Customer;
+import com.example.SpringDemo.e_commerce.product.Product;
 import com.example.SpringDemo.e_commerce.user.User;
 import jakarta.persistence.*;
 
 import java.sql.Date;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 @Entity
 @Table(name = "orders")
 public class Order {
@@ -23,11 +28,34 @@ public class Order {
     @Column(name = "description")
     private String orderDescription;
 
+    @ManyToMany
+    List<Product> products;
+
+
+
+    //todo total price
+
     public Order(){}
 
     public Order(Long customerId, String orderDescription){
         this.orderDate = Date.valueOf(LocalDate.EPOCH);
         this.orderDescription = orderDescription;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public void addProduct(Product product) {
+        this.products.add(product);
+    }
+
+    public void addProducts(List<Product> products) {
+        this.products.addAll(products);
     }
 
     public Customer getCustomer() {
@@ -60,5 +88,10 @@ public class Order {
 
     public void setOrderDescription(String orderDescription) {
         this.orderDescription = orderDescription;
+    }
+
+
+    public void addProducts(Map<Product, Integer> productMap) {
+        this.products.add((Product) productMap);
     }
 }

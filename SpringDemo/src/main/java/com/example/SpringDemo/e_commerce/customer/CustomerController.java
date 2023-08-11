@@ -52,4 +52,11 @@ public class CustomerController {
         customerService.deleteCustomer(username);
         return ResponseEntity.noContent().build();
     }
+
+    @PostMapping("/users/{username}/basket/checkout")
+
+    public void checkout(@PathVariable("username") String username, @RequestBody String description){
+        customerService.checkout(username,description);
+
+    }
 }

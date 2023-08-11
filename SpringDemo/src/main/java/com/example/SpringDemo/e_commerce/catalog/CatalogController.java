@@ -1,6 +1,7 @@
 package com.example.SpringDemo.e_commerce.catalog;
 
 import com.example.SpringDemo.e_commerce.product.Product;
+import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
