@@ -61,7 +61,7 @@ public class CustomerController {
         customerService.checkout(username,description);
     }
 
-    @PostMapping("/orders")
+    @PostMapping("/users/orders")
     @ResponseBody
     public Order createOrder(@RequestBody OrderDTO orderDto){
         return customerService.createOrder(orderDto);

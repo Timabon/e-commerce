@@ -14,6 +14,7 @@ public class SpringDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDemoApplication.class, args);
 
+		//Ebder
 		/*ApplicationContext context = */
 		/*Triangle triangle = (Triangle) context.getBean("pointA");
 		Triangle triangle2 = (Triangle) context.getBean("pointB");
