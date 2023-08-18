@@ -12,8 +12,8 @@ public class Customer extends User {
 
 
     public Customer(){};
-    public Customer(String username, String e_mail, String password){
-        super(username, e_mail, password);
+    public Customer(String username, String e_mail, String password, String role){
+        super(username, e_mail, password, role);
     }
 
     public String getShippingAddress() {

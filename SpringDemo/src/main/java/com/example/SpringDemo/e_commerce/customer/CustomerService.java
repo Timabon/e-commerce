@@ -12,6 +12,7 @@ import com.example.SpringDemo.e_commerce.customer.CustomerRepository;
 import com.example.SpringDemo.e_commerce.user.User;
 import com.example.SpringDemo.exception.ResourceNotFoundException;
 import jakarta.transaction.Transactional;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.ws.rs.NotFoundException;
@@ -25,6 +26,7 @@ public class CustomerService {
 
     OrderService orderService;
 
+    private PasswordEncoder passwordEncoder;
     Basket basket;
     //TODO register and login metods
 
@@ -33,6 +35,8 @@ public class CustomerService {
     public void login(){};
     @Transactional
     public Customer createCustomer(Customer customer){
+        customer.setPassword(passwordEncoder.encode(customer.getPassword()));
+        System.out.println("Password: " + customer.getPassword());
         return customerRepository.save(customer);
     }
 
@@ -72,7 +76,8 @@ public class CustomerService {
         return customerRepository.saveAll(customers);
     }
 
-    public CustomerService(CustomerRepository customerRepository, OrderRepository orderRepository, Basket basket, OrderService orderService){
+    public CustomerService(CustomerRepository customerRepository, OrderRepository orderRepository, Basket basket, OrderService orderService, PasswordEncoder passwordEncoder){
+        this.passwordEncoder = passwordEncoder;
         this.orderService = orderService;
         this.orderRepository = orderRepository;
         this.customerRepository = customerRepository;

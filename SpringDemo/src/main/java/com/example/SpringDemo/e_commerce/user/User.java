@@ -18,16 +18,23 @@ public class User {
     @Column(name = "password")
     private String password;
 
+    public void setRoles(String role) {
+        this.role = role;
+    }
+
+    @Column(name = "role")
+    private String role;
 
 
     public User(){}
 
 
-    public User(String username, String e_mail, String password){
+    public User(String username, String e_mail, String password,String role){
         super();
         this.username = username;
         this.e_mail = e_mail;
         this.password = password;
+        this.role = role;
     }
 
     public long getUserId() {
@@ -60,5 +67,10 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+
+    public String getRoles() {
+        return role;
     }
 }
