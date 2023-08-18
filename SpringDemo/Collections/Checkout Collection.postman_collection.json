@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "030f7bae-3642-4a2a-86de-b0ad7d5abf42",
+		"name": "Checkout Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17949598"
+	},
+	"item": [
+		{
+			"name": "PostCheckout",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"user\",\r\n    \"orderDescription\":\"this is a simple orderDescription\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/user/basket/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"user",
+						"basket",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

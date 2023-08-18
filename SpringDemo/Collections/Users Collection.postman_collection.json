@@ -1,0 +1,399 @@
+{
+	"info": {
+		"_postman_id": "956924a8-522d-4ea5-a172-2c4f33fde2f3",
+		"name": "Users Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17949598"
+	},
+	"item": [
+		{
+			"name": "CreateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Setting user data\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.collectionVariables.set(\"USERID\", jsonData.id);\r",
+							"    pm.collectionVariables.set(\"USERNAME\", jsonData.name);\r",
+							"    pm.collectionVariables.set(\"USERPHONE\", jsonData.phone);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"username\": \"admin\",\r\n        \"e_mail\": \"SUII@at.com\",\r\n        \"password\": \"password\",\r\n        \"shippingAddress\": \"Turkey\",\r\n        \"invoiceAddress\": \"Austria\",\r\n        \"roles\":\"ADMIN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserAfterCreate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"User exists after create\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    var id = pm.collectionVariables.get(\"USERID\");\r",
+							"    var name = pm.collectionVariables.get(\"USERNAME\");\r",
+							"    var phone = pm.collectionVariables.get(\"USERPHONE\");\r",
+							"\r",
+							"    var isExists = false;\r",
+							"\r",
+							"    for (var i = 0; i < jsonData.length; i++ /** i = i + 1 */) {\r",
+							"\t    if (jsonData[i].id == id && jsonData[i].name == name && jsonData[i].phone == phone) {\r",
+							"            isExists = true\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(isExists).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/Ender",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"Ender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUsers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n        \"username\": \"Flocki\",\r\n        \"e_mail\": \"SUII@at.com\",\r\n        \"password\": \"password\"\r\n  },\r\n  {\r\n    \"username\": \"Tima\",\r\n    \"e_mail\": \"timabondarcuk@gmail.com\",\r\n    \"password\": \"P@ssw0rd456\"\r\n  },\r\n  {\r\n    \"username\": \"linda_miller\",\r\n    \"e_mail\": \"linda.miller@example.com\",\r\n    \"password\": \"Miller123!@#\"\r\n  },\r\n  {\r\n    \"username\": \"Halil Ender\",\r\n    \"e_mail\": \"halil_ender@example.com\",\r\n    \"password\": \"password69$\"\r\n  },\r\n  {\r\n    \"username\": \"mary_roberts\",\r\n    \"e_mail\": \"mary.roberts@example.com\",\r\n    \"password\": \"Password123$\"\r\n  }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"username\": \"Halil Ender\",\r\n        \"e_mail\": \"SUII@at.comffaa\",\r\n        \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/Halil Ender",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"Halil Ender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserAfterEdit",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"User doesn't exist after delete\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    var id = pm.collectionVariables.get(\"USERID\");\r",
+							"    var name = pm.collectionVariables.get(\"USERNAME\");\r",
+							"    var phone = pm.collectionVariables.get(\"USERPHONE\");\r",
+							"\r",
+							"    var isExists = false;\r",
+							"\r",
+							"    for (var i = 0; i < jsonData.length; i++ /** i = i + 1 */) {\r",
+							"\t    if (jsonData[i].id == id && jsonData[i].name == name && jsonData[i].phone == phone) {\r",
+							"            isExists = true\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(isExists).to.eql(false);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/Halil Ender",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"Halil Ender"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 204\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/Flocki",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"Flocki"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUsersAfterDelete",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"User doesn't exist after delete\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    var id = pm.collectionVariables.get(\"USERID\");\r",
+							"    var name = pm.collectionVariables.get(\"USERNAME\");\r",
+							"    var phone = pm.collectionVariables.get(\"USERPHONE\");\r",
+							"\r",
+							"    var isExists = true;\r",
+							"\r",
+							"    for (var i = 0; i < jsonData.length; i++ /** i = i + 1 */) {\r",
+							"\t    if (jsonData[i].id == id && jsonData[i].name == name && jsonData[i].phone == phone) {\r",
+							"            isExists = false\r",
+							"        }\r",
+							"    }\r",
+							"\r",
+							"    pm.expect(isExists).to.eql(true);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/Flocki",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"Flocki"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "USERID",
+			"value": ""
+		},
+		{
+			"key": "USERNAME",
+			"value": ""
+		},
+		{
+			"key": "USERPHONE",
+			"value": ""
+		}
+	]
+}

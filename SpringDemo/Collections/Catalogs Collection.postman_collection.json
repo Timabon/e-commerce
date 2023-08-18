@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "e845373c-aa48-4e24-a08c-210f26ccf4fa",
+		"name": "Catalogs Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17949598"
+	},
+	"item": [
+		{
+			"name": "CreateCatalog",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Electronics\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/catalogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"catalogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCatalogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/catalogs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"catalogs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProductToCatalog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"productId\": 1,\r\n        \"productName\": \"New Product12\",\r\n        \"productDetails\": \"This is a new product with some details.\",\r\n        \"productPrice\": 200\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/catalogs/1/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"catalogs",
+						"1",
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddProductsToCatalog",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"productId\": 1,\r\n        \"productName\": \"Sample Product 2\",\r\n        \"productDetails\": \"This is a sample product with some details.\",\r\n        \"productPrice\": 100\r\n    },\r\n    {\r\n        \"productId\": 2,\r\n        \"productName\": \"Sample Product 2\",\r\n        \"productDetails\": \"This is a sample product with some details.\",\r\n        \"productPrice\": 100\r\n    },\r\n    {\r\n        \"productId\": 3,\r\n        \"productName\": \"Sample Product 2\",\r\n        \"productDetails\": \"This is a sample product with some details.\",\r\n        \"productPrice\": 100\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/catalogs/2/addproducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"catalogs",
+						"2",
+						"addproducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/catalogs/1/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"catalogs",
+						"1",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "password",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "user",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

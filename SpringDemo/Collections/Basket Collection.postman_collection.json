@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "17864f3d-1c39-41bd-aec8-477864fde814",
+		"name": "Basket Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17949598"
+	},
+	"item": [
+		{
+			"name": "PostFillTheBasketAdmin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 1,\r\n    \"productName\": \"New Product1\",\r\n    \"productDetails\": \"This is a new product with some details.\",\r\n    \"productPrice\": 200\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/admin/basket?amount=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"admin",
+						"basket"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostFillTheBasketUser",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 2,\r\n    \"productName\": \"New Product12\",\r\n    \"productDetails\": \"This is a new product with some details.\",\r\n    \"productPrice\": 200\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/user/basket?amount=124",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"user",
+						"basket"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "124"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBasketUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/user/basket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"user",
+						"basket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBasketAdmin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/admin/basket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"admin",
+						"basket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetClearBasket",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/users/user/basket/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"user",
+						"basket",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
