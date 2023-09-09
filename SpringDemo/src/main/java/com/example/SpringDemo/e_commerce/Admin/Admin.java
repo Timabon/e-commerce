@@ -6,6 +6,3 @@ public class Admin extends User {
 }
 
 //hello how re you
-// good mate 
-//FDSJKSAJDKJfasdmeow
-//DSADASDGHUY sosy
