@@ -3,6 +3,7 @@ import com.example.SpringDemo.e_commerce.order.Order;
 import com.example.SpringDemo.e_commerce.order.OrderDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,9 +20,16 @@ public class CustomerController {
     }
 
     @GetMapping("/users")
+    public String getHomePage() {
+        return "doggy"; // Return the HTML page name without the .html extension
+    }
+
+   /* @GetMapping("/users")
     public List<Customer> getAllCustomers(){
         return customerService.findAll();
-    }
+    }*/
+
+
 
     @GetMapping("/users/{username}")
     @ResponseBody
